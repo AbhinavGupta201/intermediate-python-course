@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 
 def main():
@@ -12,11 +13,14 @@ def main():
     print("\n")
     dice_rolls = int ( input("Enter the No of dice Roles: "))
     print("\n")
+    sleep(1)
     for k, v in info.items():
         print(f'Player: {v} is rolling ......')
+       
         # dice_rolls = 1
         dice_sum = 0
         for i in range(0, dice_rolls):
+            sleep(1)
             roll = random.randint(1, 6)
             dice_sum = dice_sum + roll
             # Note that the beginning and the end of the range are inclusive bounds. That is, 1 and 6 are possible values, along with integers between them.
@@ -26,7 +30,7 @@ def main():
                 print(f'You rolled a {roll}! Critical Success!')
             else:
                 print(f'You rolled a {roll}')
-
+        sleep(1)
         print(f'{v} have rolled a total of {dice_sum}')
         total[v]=dice_sum
         print("\n")
@@ -43,6 +47,9 @@ def main():
         count=1
         max=v
         winner=k
+    sleep(1)
+    print("And the Winner is....")
+    sleep(3)
     if count>1 :
       print("Game Draw !!!")
     else :
